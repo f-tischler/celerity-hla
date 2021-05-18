@@ -134,6 +134,7 @@ namespace celerity::hla
 		bool is_subrange(buffer_iterator<T, Rank> from, buffer_iterator<T, Rank> to)
 		{
 			//assert(from.get_buffer().get_id() == to.get_buffer().get_id() && "invalid iterator pair");
+			//TODO shouldn't that be from != begin || to != end ?
 			return from == begin(from.get_buffer()) && to == end(to.get_buffer());
 		}
 
